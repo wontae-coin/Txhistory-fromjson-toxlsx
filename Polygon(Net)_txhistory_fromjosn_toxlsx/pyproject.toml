@@ -1,14 +1,15 @@
 [tool.poetry]
-name = "terra(net)_txhistory_fromjson_toxlsx"
+name = "polygon(net)_txhistory_fromjosn_toxlsx"
 version = "0.1.0"
 description = ""
 authors = ["beegramin9 <wontae.coin@gmail.com>"]
 
 [tool.poetry.dependencies]
 python = "^3.10"
-requests = "^2.27.1"
 pandas = "^1.4.2"
 openpyxl = "^3.0.10"
+xlrd = "^2.0.1"
+numpy = "^1.22.4"
 
 [tool.poetry.dev-dependencies]
 

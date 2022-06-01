@@ -25,7 +25,7 @@ for tx in txs:
 
     tx_msgs = tx_data['value']['msg']
     for tx_msg in tx_msgs:
-        # 하나의 tx_hash에 tx가 어려개 있는 경우
+        # 하나의 tx_hash에 tx가 여러개 있는 경우
         tx_type = tx_msg['type']
         if tx_type == "bank/MsgSend":
             num += 1
@@ -44,6 +44,7 @@ for tx in txs:
             tx_from_address = tx_msg['value']['from_address']
             if tx_from_address == target_account:
                 tx_amount_out = -1 * tx_amount
+            # IF-ELSE가 틀렸나?
             else:
                 tx_amount_in = tx_amount
             # TO_ADDRESS
